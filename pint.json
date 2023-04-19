@@ -1,4 +1,8 @@
 {
+    "indent": "  ",
+    "rules": {
+        "statement_indentation": true
+    },
     "exclude": [
         "tests/Fixtures"
     ]

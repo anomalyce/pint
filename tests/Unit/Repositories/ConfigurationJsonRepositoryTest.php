@@ -9,6 +9,12 @@ it('works without json file', function () {
         ->and($repository->rules())->toBeEmpty();
 });
 
+it('may have indent option', function () {
+    $repository = new ConfigurationJsonRepository(dirname(__DIR__, 2).'/Fixtures/indent/pint.json', null);
+
+    expect($repository->indent())->toBe("\t");
+});
+
 it('may have rules options', function () {
     $repository = new ConfigurationJsonRepository(dirname(__DIR__, 2).'/Fixtures/rules/pint.json', 'psr12');
 
